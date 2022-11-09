@@ -3,7 +3,9 @@ import { Marker, Popup, MapContainer, TileLayer, useMap } from "react-leaflet";
 import L from "leaflet";
 import "./Map.css";
 
-const Map = () => {
+const Map = (props) => {
+  const latitude = 12;
+  const longitude = 13;
   const position = [51.505, -0.09];
   const customMarker = new L.icon({
     iconUrl: "https://unpkg.com/leaflet@1.5.1/dist/images/marker-icon.png",
@@ -15,6 +17,7 @@ const Map = () => {
   return (
     <div>
       <MapContainer
+        id="mapId"
         center={position}
         zoom={6}
         scrollWheelZoom={false}
@@ -25,9 +28,9 @@ const Map = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker position={position} icon={customMarker}>
-          {/* <Popup>
+          <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup> */}
+          </Popup>
         </Marker>
       </MapContainer>
     </div>
