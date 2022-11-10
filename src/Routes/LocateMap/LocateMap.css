@@ -1,3 +1,90 @@
+.route_dir_status {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0.5rem;
+}
+.route_details {
+  width: 100%;
+}
+.route {
+  margin: 0 0.5rem;
+}
+.route_name {
+  padding: 0.5rem;
+  width: 96.5%;
+  border: none;
+  box-shadow: var(--input_box_shadow);
+  outline: transparent;
+}
+.create_form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 4rem;
+}
+.add_stop_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary_color);
+  margin: 0 0.5rem;
+}
+.stop_details {
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -ms-touch-action: none;
+  touch-action: none;
+}
+.trash_icon,
+.drag_icon {
+  margin-bottom: 0.5rem;
+}
+.drag_icon {
+  margin-left: 0.5rem;
+}
+.trash_icon {
+  color: var(--red_color);
+}
+.stop_name {
+  width: 5rem;
+  flex-grow: 2;
+}
+.lat {
+  width: 4rem;
+  flex-grow: 1;
+}
+.long {
+  width: 4rem;
+  flex-grow: 1;
+}
+.stop_name_input {
+  width: 95%;
+}
+.lat_input {
+  width: 95%;
+}
+.long_input {
+  width: 95%;
+}
+.submit {
+  display: flex;
+  justify-content: center;
+}
+.submit_btn {
+  background-color: var(--primary_color);
+  color: var(--text_white_color);
+  font-size: 14px;
+}
+.route_error {
+  margin: 0.5rem;
+}
+.stop_error {
+  margin: 1rem 0.5rem;
+}
+
+/* map container styling */
 .formBlock {
   max-width: 300px;
   background-color: #fff;
