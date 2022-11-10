@@ -19,15 +19,18 @@ import {
 import { useCreateRoute } from "../../context/createroute-context";
 import { ShowStopDetails } from "../../components/showStopDetails/ShowStopDetails";
 import { useParams } from "react-router-dom";
+import { RouteDetail } from "../../components/routeDetail/RouteDetail";
+import { useRoute } from "../../context/routeContext";
+import { SubmitForm } from "../../components/submitForm/SubmitForm";
 
 const LocateMap = () => {
-  // const [routes, setRoutes] = useState();
   const { route_ID } = useParams();
   const {
     createLocate: { route, route_Name, route_Direction, route_Status, errors },
     dispatch,
   } = useCreateRoute();
 
+  const { routes, addRoute } = useRoute();
   useEffect(() => {
     // setRoutes()
     // setRoutes((routes) => [...routes, { ...route }]);
@@ -99,6 +102,10 @@ const LocateMap = () => {
   const addStopsHandler = () => {
     dispatch({ type: "ADD_NEW_STOP" });
   };
+
+  const submitForm = () => {
+    addRoute(route);
+  };
   return (
     <div>
       <h1>Create Routes</h1>
@@ -160,13 +167,39 @@ const LocateMap = () => {
         </div>
       </div>
       {route?.stops.length > 0 && (
-        <IconButton
+        <SubmitForm
           width={60}
           colorScheme="green"
-          icon={<BsFillArrowRightCircleFill />}
+          // icon={<BsFillArrowRightCircleFill />}
           edit={route_ID ? true : false}
+          // onClick={submitForm}
         />
       )}
+
+      {/* view routes */}
+      <div>
+        <div className="routes_list_header">
+          <div className="routes_list_detail_header">
+            <p>Bus No.</p>
+            <p>Direction</p>
+            <p>Status</p>
+          </div>
+          <div className="routes_list_btn_header">
+            <p className="edit_btn">Edit</p>
+            <p className="edit_btn">Remove</p>
+          </div>
+        </div>
+
+        {routes.map((route, index) => (
+          <RouteDetail
+            key={route.route_ID}
+            route={route}
+            remove={true}
+            index={index}
+          />
+        ))}
+      </div>
+
       <div id="map">
         <MapContainer
           id="mapId"

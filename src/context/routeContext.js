@@ -4,12 +4,10 @@ const RouteContext = createContext();
 
 export const RouteProvider = ({ children }) => {
   const [routes, setRoutes] = useState([]);
-  const addRoute = () => {
-    
-  };
+  const addRoute = (route) => setRoutes((route) => [...routes, { ...route }]);
 
   return (
-    <RouteContext.Provider value={{ addRoute }}>
+    <RouteContext.Provider value={{ routes, setRoutes, addRoute }}>
       {children}
     </RouteContext.Provider>
   );

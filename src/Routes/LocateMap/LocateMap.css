@@ -13,7 +13,6 @@
   padding: 0.5rem;
   width: 96.5%;
   border: none;
-  box-shadow: var(--input_box_shadow);
   outline: transparent;
 }
 .create_form {
@@ -118,3 +117,70 @@
 input:nth-child(1) {
   margin-bottom: 10px;
 }
+
+/* view routes */
+.route_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 1rem;
+}
+.route_link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+}
+.routes_list_header {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+.routes_list_detail_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1rem;
+  width: 100%;
+}
+.routes_list_btn_header {
+  display: flex;
+  margin: 0.5rem;
+  width: 110px;
+  margin-left: auto;
+}
+.route_detail {
+  display: flex;
+  align-items: center;
+}
+.edit_remove_btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem;
+  margin-left: auto;
+  width: 120px;
+}
+.remove_btn {
+  margin: 0 0.5rem;
+}
+.edit_btn {
+  margin: 0 0.5rem;
+}
+.search_field {
+  position: relative;
+}
+.search_icon {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.4rem;
+}
+.search_input_field {
+  width: 93%;
+  outline: transparent;
+  padding: 0.4rem 1.5rem;
+  margin: 1rem;
+}
+

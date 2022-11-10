@@ -4,6 +4,7 @@ import { locateMapHelpers } from "../helpers/locateMap";
 const CreateLocateContext = createContext();
 
 export const CreateLocateProvider = ({ children }) => {
+  
   const initialState = {
     route: {
       route_ID: "",
