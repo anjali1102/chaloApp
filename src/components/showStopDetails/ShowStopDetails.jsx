@@ -25,7 +25,7 @@ const ShowStopDetails = ({ position, stopId, stop, latitude, longitude }) => {
   };
 
   const longitudeHandler = (e) => {
-    dispatch({ type: "ADD_LONGITUTE", payload: e.target.value });
+    dispatch({ type: "ADD_LONGITUTE", payload: {stopId, longitude: e.target.value} });
   };
 
   return (

@@ -1,0 +1,16 @@
+.stop_detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+.meta_data {
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+.column_header,
+.column_data {
+  width: 33%;
+  text-align: left;
+}
