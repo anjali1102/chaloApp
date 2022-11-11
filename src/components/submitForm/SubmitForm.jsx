@@ -3,6 +3,7 @@ import React from "react";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { useCreateRoute } from "../../context/createroute-context";
 import { useRoute } from "../../context/routeContext";
+import "./SubmitForm.css";
 
 const SubmitForm = ({ edit }) => {
   const {
@@ -18,7 +19,7 @@ const SubmitForm = ({ edit }) => {
     }
   };
   return (
-    <div>
+    <div className="view_routes_wrapper">
       <Button
         leftIcon={<BsFillArrowRightCircleFill />}
         colorScheme="teal"

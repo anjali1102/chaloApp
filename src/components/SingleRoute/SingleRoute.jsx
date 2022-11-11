@@ -1,12 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useRoute } from "../../context/routeContext";
-
-import { Marker, Popup, MapContainer, TileLayer, useMap } from "react-leaflet";
-import leafRed from "../../img/leafRed.png";
-import leafOrange from "../../img/leafOrange.png";
-import leafShadow from "../../img/leafShadow.png";
-import L from "leaflet";
 import { Map } from "../map/Map";
 import "./SingleRoute.css";
 

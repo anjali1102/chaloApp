@@ -4,7 +4,7 @@
   margin: 1rem 0.5rem;
 }
 .route_details {
-  width: 100%;
+  width: 60%;
 }
 .route {
   margin: 0 0.5rem;
@@ -21,30 +21,15 @@
   width: 100%;
   margin-top: 4rem;
 }
-.add_stop_btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--primary_color);
-  margin: 0 0.5rem;
-}
+
 .stop_details {
   width: 98%;
   display: flex;
   justify-content: center;
   align-items: center;
-  -ms-touch-action: none;
-  touch-action: none;
-}
-.trash_icon,
-.drag_icon {
-  margin-bottom: 0.5rem;
-}
-.drag_icon {
-  margin-left: 0.5rem;
 }
 .trash_icon {
-  color: var(--red_color);
+  margin-bottom: 0.5rem;
 }
 .stop_name {
   width: 5rem;
@@ -71,11 +56,7 @@
   display: flex;
   justify-content: center;
 }
-.submit_btn {
-  background-color: var(--primary_color);
-  color: var(--text_white_color);
-  font-size: 14px;
-}
+
 .route_error {
   margin: 0.5rem;
 }
@@ -102,14 +83,6 @@
   margin-top: 180px;
 }
 
-.input {
-  padding: 10px;
-  width: 100%;
-  border: 1px solid #ddd;
-  font-size: 15px;
-  border-radius: 3px;
-}
-
 #form {
   padding: 0;
   margin: 0;
@@ -130,13 +103,11 @@ input:nth-child(1) {
   display: block;
   width: 100%;
   text-decoration: none;
-  color: #000;
 }
 .routes_list_header {
   display: flex;
   align-items: center;
   margin: 0.5rem 0;
-  font-weight: 600;
 }
 .routes_list_detail_header {
   display: flex;
@@ -151,36 +122,3 @@ input:nth-child(1) {
   width: 110px;
   margin-left: auto;
 }
-.route_detail {
-  display: flex;
-  align-items: center;
-}
-.edit_remove_btns {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0.5rem;
-  margin-left: auto;
-  width: 120px;
-}
-.remove_btn {
-  margin: 0 0.5rem;
-}
-.edit_btn {
-  margin: 0 0.5rem;
-}
-.search_field {
-  position: relative;
-}
-.search_icon {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.4rem;
-}
-.search_input_field {
-  width: 93%;
-  outline: transparent;
-  padding: 0.4rem 1.5rem;
-  margin: 1rem;
-}
-

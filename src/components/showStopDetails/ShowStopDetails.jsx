@@ -1,6 +1,5 @@
 import React from "react";
 import { IconButton, Input } from "@chakra-ui/react";
-import { GrEdit } from "react-icons/gr";
 import { FcFullTrash } from "react-icons/fc";
 import { useCreateRoute } from "../../context/createroute-context";
 
@@ -60,7 +59,7 @@ const ShowStopDetails = ({stopId, latitude, longitude }) => {
         icon={<FcFullTrash />}
         onClick={() => dispatch({ type: "REMOVE_STOP", payload: { stopId } })}
       />
-      <IconButton className="edit-icon" icon={<GrEdit />} />
+     
     </div>
   );
 };
