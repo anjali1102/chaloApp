@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom";
 import { useRoute } from "../../context/routeContext";
 
 import { Marker, Popup, MapContainer, TileLayer, useMap } from "react-leaflet";
-import leafRed from "../../img/leaf-red.png";
-import leafOrange from "../../img/leaf-orange.png";
-import leafShadow from "../../img/leaf-shadow.png";
+import leafRed from "../../img/leafRed.png";
+import leafOrange from "../../img/leafOrange.png";
+import leafShadow from "../../img/leafShadow.png";
 import L from "leaflet";
 import { Map } from "../map/Map";
 import "./SingleRoute.css";
@@ -14,6 +14,8 @@ const SingleRoute = () => {
   const { routes } = useRoute();
   const { route_ID } = useParams();
   const route = routes.find((route) => route.route_ID === route_ID);
+
+
   return (
     <>
       {route?.stops[0].latitude && <Map stops={route?.stops} />}
@@ -38,8 +40,8 @@ const SingleRoute = () => {
       </div>
       <div>
         {route?.stops?.map((stop) => (
-            <div className="stop_detail">
-              {console.log(stop)}
+          <div className="stop_detail">
+            {console.log(stop)}
             <p className="column_data">{stop.stopName}</p>
             <p className="column_data">{stop.latitude}</p>
             <p className="column_data">{stop.longitude}</p>

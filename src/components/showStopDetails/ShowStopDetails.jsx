@@ -1,11 +1,10 @@
 import React from "react";
-import { IoMdCloseCircle } from "react-icons/io";
-import { Box, Flex, HStack, IconButton, Input } from "@chakra-ui/react";
+import { IconButton, Input } from "@chakra-ui/react";
 import { GrEdit } from "react-icons/gr";
 import { FcFullTrash } from "react-icons/fc";
 import { useCreateRoute } from "../../context/createroute-context";
 
-const ShowStopDetails = ({ position, stopId, stop, latitude, longitude }) => {
+const ShowStopDetails = ({stopId, latitude, longitude }) => {
   const {
     createLocate: { route, errors, stopName },
     dispatch,
@@ -43,7 +42,7 @@ const ShowStopDetails = ({ position, stopId, stop, latitude, longitude }) => {
           type="text"
           placeholder="latitude"
           className="lat_input"
-          value={latitude} //stop.latitide
+          value={latitude} 
           onChange={latitudeHandler}
         />
       </div>
@@ -52,7 +51,7 @@ const ShowStopDetails = ({ position, stopId, stop, latitude, longitude }) => {
           type="text"
           placeholder="Longitude"
           className="long_input"
-          value={longitude} //stop.longitude
+          value={longitude} 
           onChange={longitudeHandler}
         />
       </div>

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Marker, Popup, MapContainer, TileLayer, useMap } from "react-leaflet";
-import leafRed from "../../img/leaf-red.png";
-import leafOrange from "../../img/leaf-orange.png";
-import leafShadow from "../../img/leaf-shadow.png";
+import leafRed from '../../img/leafRed.png'
+import leafOrange from "../../img/leafOrange.png";
+import leafShadow from "../../img/leafShadow.png";
 import L from "leaflet";
 import { MdDirectionsWalk } from "react-icons/md";
 import { FcFullTrash } from "react-icons/fc";
@@ -194,7 +194,7 @@ const LocateMap = () => {
         ))}
       </div>
 
-      <div id="map">
+      {/* <div id="map">
         <MapContainer
           id="mapId"
           // center={position}
@@ -214,7 +214,7 @@ const LocateMap = () => {
             <Popup>{`coordinates : ${orangeIconCoord.lat}, ${orangeIconCoord.lng}`}</Popup>
           </Marker>
         </MapContainer>
-      </div>
+      </div> */}
     </div>
   );
 };
