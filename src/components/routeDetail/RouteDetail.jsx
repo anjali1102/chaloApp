@@ -3,7 +3,8 @@ import { FcFullTrash } from "react-icons/fc";
 import { GrEdit } from "react-icons/gr";
 
 const RouteDetail = ({ route }) => {
-  console.log("route in routeDetail file", { route }, route.route_Name);
+  //   console.log("route in routeDetail file", { route }, route.route_Name);
+  console.log(route.stops);
   return (
     <div>
       <div className="route_info">

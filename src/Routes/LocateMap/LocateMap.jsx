@@ -11,8 +11,6 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import "./LocateMap.css";
 import {
   Button,
-  ButtonSpinner,
-  IconButton,
   Input,
   Select,
 } from "@chakra-ui/react";
@@ -32,8 +30,6 @@ const LocateMap = () => {
 
   const { routes, addRoute } = useRoute();
   useEffect(() => {
-    // setRoutes()
-    // setRoutes((routes) => [...routes, { ...route }]);
     if (!route.route_ID) {
       dispatch({ type: "ADD_ROUTE_ID" });
     }
@@ -109,7 +105,7 @@ const LocateMap = () => {
   return (
     <div>
       <h1>Create Routes</h1>
-      <div className="create_form">
+      <div className="create_form" isRequired>
         <div className="route_details">
           {/* <Route /> */}
           <div className="route">
@@ -166,13 +162,11 @@ const LocateMap = () => {
           ))}
         </div>
       </div>
-      {route?.stops.length > 0 && (
+      {route?.stops.length > 1 && (
         <SubmitForm
           width={60}
           colorScheme="green"
-          // icon={<BsFillArrowRightCircleFill />}
           edit={route_ID ? true : false}
-          // onClick={submitForm}
         />
       )}
 

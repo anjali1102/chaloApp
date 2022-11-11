@@ -26,7 +26,7 @@ const SubmitForm = ({ edit }) => {
         width={60}
         onClick={submitHandler}
       >
-        Submit{" "}
+        Submit
       </Button>
     </div>
   );
