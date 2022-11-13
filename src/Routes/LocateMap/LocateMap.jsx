@@ -20,6 +20,8 @@ const LocateMap = () => {
 
   const { routes } = useRoute();
 
+  console.log("routes", routes);
+
   const enterRouteNumber = (e) => {
     dispatch({ type: "ADD_ROUTE_NAME", payload: { value: e.target.value } });
   };

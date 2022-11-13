@@ -16,9 +16,23 @@ export const RouteProvider = ({ children }) => {
     setRoutes(newRoutes);
   };
 
+  const updateRouteDetail = (routeDetailGiven, updatedRouteDetail) => {
+    setRoutes(
+      routes.map((eachRoute) =>
+        eachRoute.route_ID === routeDetailGiven.route_ID ? updatedRouteDetail : eachRoute
+      )
+    );
+  };
+
   return (
     <RouteContext.Provider
-      value={{ routes, setRoutes, addRoute, removeRouteDetail }}
+      value={{
+        routes,
+        setRoutes,
+        addRoute,
+        removeRouteDetail,
+        updateRouteDetail,
+      }}
     >
       {children}
     </RouteContext.Provider>
