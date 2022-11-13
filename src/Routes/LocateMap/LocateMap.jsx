@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { MdDirectionsWalk } from "react-icons/md";
 import "./LocateMap.css";
-import { Button, Heading, Input, Select } from "@chakra-ui/react";
+import { Button, FormControl, Heading, Input, Select } from "@chakra-ui/react";
 import { useCreateRoute } from "../../context/createroute-context";
 import {
   ShowStopDetails,
@@ -19,11 +19,6 @@ const LocateMap = () => {
   } = useCreateRoute();
 
   const { routes } = useRoute();
-  useEffect(() => {
-    if (!route.route_ID) {
-      dispatch({ type: "ADD_ROUTE_ID" });
-    }
-  }, []);
 
   const enterRouteNumber = (e) => {
     dispatch({ type: "ADD_ROUTE_NAME", payload: { value: e.target.value } });
@@ -49,7 +44,7 @@ const LocateMap = () => {
       <Heading as="h3" size="xl">
         Create Route
       </Heading>
-      <div className="create_form" isRequired>
+      <div className="create_form">
         <div className="route_details">
           {/* <Route /> */}
           <div className="route">
@@ -118,7 +113,7 @@ const LocateMap = () => {
       <Heading as="h3" size="xl">
         View The Routes
       </Heading>
-      <div >
+      <div className="view_routes_wrapper">
         <div className="routes_list_header">
           <div className="routes_list_detail_header">
             <p>Bus No.</p>
@@ -131,6 +126,7 @@ const LocateMap = () => {
           </div>
         </div>
 
+        {console.log("route", route)}
         {routes.map((route, index) => (
           <RouteDetail
             key={route.route_ID}

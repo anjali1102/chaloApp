@@ -19,6 +19,7 @@ export const CreateLocateProvider = ({ children }) => {
       stops: [],
     },
   };
+  
 
   const [createLocate, dispatch] = useReducer(locateMapHelpers, initialState);
   const addStops = () => {

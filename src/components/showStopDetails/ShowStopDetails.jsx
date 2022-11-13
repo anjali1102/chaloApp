@@ -1,9 +1,9 @@
 import React from "react";
-import { IconButton, Input } from "@chakra-ui/react";
-import { FcFullTrash } from "react-icons/fc";
+import { Input } from "@chakra-ui/react";
 import { useCreateRoute } from "../../context/createroute-context";
+import { IoMdCloseCircle } from "react-icons/io";
 
-const ShowStopDetails = ({stopId, latitude, longitude }) => {
+const ShowStopDetails = ({ stopId, latitude, longitude }) => {
   const {
     createLocate: { route, errors, stopName },
     dispatch,
@@ -23,7 +23,10 @@ const ShowStopDetails = ({stopId, latitude, longitude }) => {
   };
 
   const longitudeHandler = (e) => {
-    dispatch({ type: "ADD_LONGITUTE", payload: {stopId, longitude: e.target.value} });
+    dispatch({
+      type: "ADD_LONGITUTE",
+      payload: { stopId, longitude: e.target.value },
+    });
   };
 
   return (
@@ -38,28 +41,26 @@ const ShowStopDetails = ({stopId, latitude, longitude }) => {
       </div>
       <div className="lat">
         <Input
-          type="text"
+          type="number"
           placeholder="latitude"
           className="lat_input"
-          value={latitude} 
+          value={latitude}
           onChange={latitudeHandler}
         />
       </div>
       <div className="long">
         <Input
-          type="text"
+          type="number"
           placeholder="Longitude"
           className="long_input"
-          value={longitude} 
+          value={longitude}
           onChange={longitudeHandler}
         />
       </div>
-      <IconButton
-        className="delete-icon"
-        icon={<FcFullTrash />}
-        onClick={() => dispatch({ type: "REMOVE_STOP", payload: { stopId } })}
-      />
-     
+
+      <span className="delete-icon" onClick={()=> dispatch({ type: "REMOVE_STOP", payload: { stopId } })}>
+        <IoMdCloseCircle />
+      </span>
     </div>
   );
 };
@@ -96,9 +97,6 @@ export { ShowStopDetails };
 //         onChange=""
 //       />
 //     </div>
-//     <span className="delete-icon" onClick="">
-//       <IoMdCloseCircle />
-//     </span>
 //   </Box>
 // </HStack>
 

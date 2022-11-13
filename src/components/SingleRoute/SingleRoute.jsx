@@ -9,7 +9,6 @@ const SingleRoute = () => {
   const { route_ID } = useParams();
   const route = routes.find((route) => route.route_ID === route_ID);
 
-
   return (
     <>
       {route?.stops[0].latitude && <Map stops={route?.stops} />}
@@ -35,7 +34,6 @@ const SingleRoute = () => {
       <div>
         {route?.stops?.map((stop) => (
           <div className="stop_detail">
-            {console.log(stop)}
             <p className="column_data">{stop.stopName}</p>
             <p className="column_data">{stop.latitude}</p>
             <p className="column_data">{stop.longitude}</p>

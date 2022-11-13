@@ -1,9 +1,8 @@
-import { Button, IconButton } from "@chakra-ui/react";
+import { Button, Center, IconButton } from "@chakra-ui/react";
 import React from "react";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { useCreateRoute } from "../../context/createroute-context";
 import { useRoute } from "../../context/routeContext";
-import "./SubmitForm.css";
 
 const SubmitForm = ({ edit }) => {
   const {
@@ -19,16 +18,18 @@ const SubmitForm = ({ edit }) => {
     }
   };
   return (
-    <div className="view_routes_wrapper">
-      <Button
-        leftIcon={<BsFillArrowRightCircleFill />}
-        colorScheme="teal"
-        variant="solid"
-        width={60}
-        onClick={submitHandler}
-      >
-        Submit
-      </Button>
+    <div className="view_submit_wrapper">
+      <Center>
+        <Button
+          leftIcon={<BsFillArrowRightCircleFill />}
+          colorScheme="teal"
+          variant="solid"
+          width={60}
+          onClick={submitHandler}
+        >
+          Submit
+        </Button>
+      </Center>
     </div>
   );
 };
