@@ -1,7 +1,7 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { LocateMap } from "./Routes/LocateMap/LocateMap";
-import { SingleRoute } from "./components/SingleRoute/SingleRoute";
+import { SingleRoute } from "./Routes/SingleRoute/SingleRoute";
 
 function App() {
   return (

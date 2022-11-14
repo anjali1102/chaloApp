@@ -1,4 +1,4 @@
-import { Button, Center, IconButton } from "@chakra-ui/react";
+import { Button, Center } from "@chakra-ui/react";
 import React from "react";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { useCreateRoute } from "../../context/createroute-context";
@@ -7,10 +7,9 @@ import { useRoute } from "../../context/routeContext";
 const SubmitForm = ({ edit }) => {
   const {
     createLocate: { route },
-    dispatch,
   } = useCreateRoute();
 
-  const { routes, addRoute } = useRoute();
+  const {addRoute } = useRoute();
 
   const submitHandler = () => {
     if (!edit) {

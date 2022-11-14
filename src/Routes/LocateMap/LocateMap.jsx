@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { MdDirectionsWalk } from "react-icons/md";
 import "./LocateMap.css";
-import { Button, FormControl, Heading, Input, Select } from "@chakra-ui/react";
+import { Button, Heading, Input, Select } from "@chakra-ui/react";
 import { useCreateRoute } from "../../context/createroute-context";
 import {
   ShowStopDetails,
@@ -19,8 +19,6 @@ const LocateMap = () => {
   } = useCreateRoute();
 
   const { routes } = useRoute();
-
-
 
   const enterRouteNumber = (e) => {
     dispatch({ type: "ADD_ROUTE_NAME", payload: { value: e.target.value } });
@@ -128,7 +126,6 @@ const LocateMap = () => {
           </div>
         </div>
 
-        {console.log("route", route)}
         {routes.map((route, index) => (
           <RouteDetail
             key={route.route_ID}

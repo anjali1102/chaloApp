@@ -22,7 +22,6 @@ import "./RouteDetail.css";
 
 const RouteDetail = ({ stopId, route }) => {
   const { removeRouteDetail, updateRouteDetail } = useRoute();
-
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const initialRef = useRef(null);
@@ -44,8 +43,6 @@ const RouteDetail = ({ stopId, route }) => {
     updateRouteDetail(route, updatedRouteDetail);
     onClose();
   };
-
-
 
   return (
     <div className="route_detail">

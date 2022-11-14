@@ -12,12 +12,7 @@ export const CreateLocateProvider = ({ children }) => {
       route_Status: "ACTIVE",
       route_Direction: "UP",
       stops: [],
-    },
-    errors: {
-      route_Name: "",
-      route_Direction: "",
-      stops: [],
-    },
+    }
   };
   
 

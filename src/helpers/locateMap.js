@@ -77,49 +77,8 @@ const locateMapHelpers = (state, action) => {
           ),
         },
       };
-    case "DISPLAY_ERROR":
-      return {
-        ...state,
-        routeObjErrors: {
-          route_Name: "",
-          route_Direction: "",
-          stops: [],
-        },
-      };
-
-    case "RESET_ERROR":
-      return {
-        ...state,
-        routeObjErrors: {
-          route_Name: "",
-          route_Direction: "",
-          stops: [],
-        },
-      };
     case "ADD_ROUTE_DETAILS":
       return { ...state, route: action.payload.route };
-
-    case "RESET_TO_INITIAL_STATE":
-      return {
-        routeObj: {
-          route_ID: "",
-          route_Name: "",
-          route_Status: "ACTIVE",
-          route_Direction: "UP",
-          stops: [],
-        },
-        routeObjErrors: {
-          route_Name: "",
-          route_Direction: "",
-          stops: [],
-        },
-      };
-
-    case "UPDATE_STOP_ORDER":
-      return {
-        ...state,
-        routeObj: { ...state.route, stops: action.payload.stops },
-      };
     default:
       return state;
   }

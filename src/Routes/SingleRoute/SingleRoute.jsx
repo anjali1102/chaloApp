@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useRoute } from "../../context/routeContext";
-import { Map } from "../map/Map";
+import { Map } from "../../components/map/Map";
 import "./SingleRoute.css";
 
 const SingleRoute = () => {
