@@ -15,6 +15,7 @@ const SubmitForm = ({ edit }) => {
   const submitHandler = () => {
     if (!edit) {
       addRoute(route);
+      
     }
   };
   return (

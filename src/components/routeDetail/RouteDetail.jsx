@@ -16,7 +16,7 @@ import {
 import React, { useRef, useState } from "react";
 import { FcFullTrash } from "react-icons/fc";
 import { GrEdit } from "react-icons/gr";
-import { Form, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useRoute } from "../../context/routeContext";
 import "./RouteDetail.css";
 
@@ -27,9 +27,6 @@ const RouteDetail = ({ stopId, route }) => {
 
   const initialRef = useRef(null);
   const finalRef = useRef(null);
-  // const referenceEdit = useRef();
-
-  console.log("route", route);
 
   const [routeName, setRouteName] = useState(route.route_Name);
   const [routeDirection, setrouteDirection] = useState(route.route_Direction);
@@ -48,6 +45,8 @@ const RouteDetail = ({ stopId, route }) => {
     onClose();
   };
 
+
+
   return (
     <div className="route_detail">
       <Link to={`/route/${route.route_ID}`} className="route_info_wrapper">
@@ -61,7 +60,6 @@ const RouteDetail = ({ stopId, route }) => {
         <FcFullTrash
           route={route}
           className="remove_btn"
-          // onClick={() => dispatch({ type: "REMOVE_STOP", payload: { stopId } })}
           onClick={() => {
             removeRouteDetail(route);
           }}
@@ -76,7 +74,6 @@ const RouteDetail = ({ stopId, route }) => {
           initialFocusRef={initialRef}
           finalFocusRef={finalRef}
           isOpen={isOpen}
-          // ref={referenceEdit}
           onClose={onClose}
         >
           <ModalOverlay />
@@ -132,11 +129,3 @@ const RouteDetail = ({ stopId, route }) => {
 };
 
 export { RouteDetail };
-
-{
-  /* <RouteStatus /> */
-}
-
-{
-  /* <AddStop />  */
-}
